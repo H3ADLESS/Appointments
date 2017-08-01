@@ -1,0 +1,215 @@
+.time-box {
+    position: relative;
+    background: white;
+    border: 1px solid black;
+    margin: 5px;
+    width: 10em;
+}
+.time-box:after, .time-box:before {
+    right: 100%;
+    top: 50%;
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+}
+
+.time-box:after {
+    border-color: transparent;
+    border-right-color: white;
+    border-width: 6px;
+    margin-top: -6px;
+}
+.time-box:before {
+    border-color: transparent;
+    border-right-color: black;
+    border-width: 7px;
+    margin-top: -7px;
+}
+
+
+
+/* ################################### */
+
+/*@media only screen and (max-width: 1279px) {*/
+    /*.timeline-container{*/
+        /*width: calc(100% - 8em);*/
+    /*}*/
+/*}*/
+
+@media only screen and (min-width: 1280px) {
+
+    .timeline-container{
+        width: 80%;
+    }
+
+    @media only screen and (min-width: 1600px) {
+        .timeline-container{
+            width: 75%;
+            max-width: 80em;
+        }
+    }
+
+}
+
+.timeline-container{
+    margin: 0 0 24px 0;
+}
+
+.line{
+    width: 0.3em;
+    background-color: lightgray;
+    content: ' ';
+    margin: auto;
+    height: 2em;
+}
+
+.timeline-row.selected > .timeline > .line, .timeline-row.jsSelected > .timeline > .line{
+    background-color: #03a9f4;
+}
+
+.time{
+    float: left;
+    min-width: 3em;
+    line-height: 0.8;
+    text-align: right;
+}
+
+.dot{
+    border-radius: 50%;
+    border: 2px solid gray;
+    height: 0.8em;
+    width: 0.8em;
+    background: white;
+    margin: auto;
+}
+
+.timeline-row.selected > .timeline.dot-container > .dot, .timeline-row.jsSelected > .timeline.dot-container > .dot {
+    border-radius: 50%;
+    border: 2px solid #03a9f4;
+    height: 0.8em;
+    width: 0.8em;
+    background-color: #03a9f4;
+    /*background: white;*/
+    margin: auto;
+}
+
+.small-dot{
+    border-radius: 50%;
+    border: 1px solid black;
+    height: 0.4em;
+    width: 0.4em;
+    margin: calc(0.2em - 1px) auto auto auto;
+    background: black;
+}
+
+/*.dot:hover{*/
+    /*border-radius: 50%;*/
+    /*border: 2px solid green;*/
+    /*height: 0.8em;*/
+    /*width: 0.8em;*/
+    /*background: green;*/
+    /*margin: auto;*/
+/*}*/
+
+.dot-container{
+    width: calc(0.8em + 4px);
+    z-index: 50;
+}
+
+.timeline{
+    float: left;
+    width: 2em;
+}
+
+.timeline-row{
+    width: 90%;
+    /*height: 1.5em;*/
+    display: flex;
+    align-items: center;
+}
+
+.timeline-row.selected , .timeline-row.jsSelected {
+    width: 90%;
+    background-color: inherit;
+    /*height: 1.5em;*/
+    display: flex;
+    align-items: center;
+}
+
+.info {
+    float: left;
+    width: 90%;
+    background-color: #d0d0d0;
+    padding: 0.25em;
+    padding-left: 1em;
+    vertical-align: middle;
+    line-height: 1.9;
+    /*height: 1.6em;*/
+    /*padding: 0.4em 1em 0.4em 1em;*/
+}
+
+.info.free {
+     text-decoration: underline;
+ }
+
+.info.free:hover {
+    background-color: #6b9e1f;
+    color: white;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.timeline-row.selected > .info.free, .timeline-row.selected > .info.free {
+    text-decoration: underline;
+    background-color: #03a9f4;
+    color: white;
+}
+
+.info.own {
+    background-color: #6b9e1f;
+    color: white;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.info.own:hover {
+    background-color: #7cb11f;
+    color: white;
+}
+
+.info.blocked {
+    color: black;
+    background: repeating-linear-gradient(
+            -45deg,
+            #d0d0d0,
+            #d0d0d0 20px,
+            #c7c7c7 20px,
+            #c7c7c7 40px
+    );
+}
+
+.timeline-row.free.jsSelected > .info.free{
+    background-color: #03a9f4;
+    color: white;
+}
+
+#dialogNextStep{
+    color: white;
+    background-color: #03a9f4
+}
+
+#appointment-dialog{
+    display: none;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    height: 5em;
+    width: 586px;
+    z-index: 900;
+    background-color: #323232;
+    color: white;
+    padding: 12px 24px 12px 24px;
+    margin-left: calc(50% - 317px);
+}
