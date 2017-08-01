@@ -1,15 +1,18 @@
 # Appointments
 This application was created to simplify the process of appointment making. 
  
-##Installation
+Installation
+------------
 To use this web application some development skills are needed. You need to compile and adjust the code by yourself.
 We recommend to use of IntelliJ Ultimate as a guide is available for this.
 
 ###Import project
+
 After you checked out this project import it into IntelliJ as a Gradle project. This process takes a while because all 
 necessary dependencies are collected automatically.
 
 ###Adjust database access
+
 You can change database access variables in /grails-app/conf/application.yml. Search for username and password. Defaults 
 are:
  - Username: uniAppUser
