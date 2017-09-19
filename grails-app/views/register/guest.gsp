@@ -7,19 +7,6 @@
 </head>
 <body>
 
-%{--<section class="fu-green">--}%
-    %{--<div class="container">--}%
-        %{--<div class="row">--}%
-            %{--<div class="section no-pad-bot">--}%
-                %{--<br>--}%
-                %{--<h5 class="header center">Gast-Registrierung</h5>--}%
-                %{--<br>--}%
-                %{--<br>--}%
-            %{--</div>--}%
-        %{--</div>--}%
-    %{--</div>--}%
-%{--</section>--}%
-
 <div class="mdl-grid">
     <div class="mdl-cell--12-col">
         <g:if test="${flash.message}">

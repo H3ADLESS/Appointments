@@ -16,6 +16,10 @@
     <div class="mdl-grid">
 
         <div class="mdl-cell mdl-cell--12-col">
+            <h4>Alle Sprechstunden</h4>
+        </div>
+
+        <div class="mdl-cell mdl-cell--12-col">
 
             <div class="custom-input-container">
                 <label class="mdl-textfield__label" for="dateFilter">Datum</label>

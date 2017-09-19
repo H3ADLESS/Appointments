@@ -11,8 +11,8 @@
 
     <div class="mdl-cell mdl-cell--12-col">
 
-        <h4>Gast-Nutzer einladen</h4>
-        <p>Nachfolgend können Sie Nutzer dazu einladen ihre Termine zukünftig über diese Anwendung zu planen. Der Nutzer kann sich dann per E-Mail und Passwort einloggen und benötigt keinen Sakai-Zugang.</p>
+        <h4>Nutzer registrieren</h4>
+        <p>Nachfolgend können Sie Nutzer dazu einladen ihre Termine zukünftig über diese Anwendung zu planen. Der Nutzer kann sich dann per E-Mail und Passwort einloggen und benötigt keinen Sakai-Zugang. </p>
 
         <g:if test="${flash.message}">
             <div class="chip" style="width: 100%; height: auto; padding: 0.4em 2em;">

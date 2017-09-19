@@ -41,7 +41,7 @@ class AppointmentController {
 
         Long prevOhDate = null
         Long nextOhDate = null
-        if (officeHours.size() > 0) {
+        if (officeHours?.size() > 0) {
             Date currentOhDate = officeHours[0].date
             def nextOfficeHour = appointmentService.getNextOfficeHourAfter(currentOhDate, lecturer)
             def prevOfficeHour = appointmentService.getPrevOfficeHourBefore(currentOhDate, lecturer)

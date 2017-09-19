@@ -15,7 +15,7 @@
 
 <div class="mdl-grid">
     <div class="mdl-cell mdl-cell--12-col">
-        <h5>Deine Termine</h5>
+        <h4>Deine Termine</h4>
         <p>Nachfolgend finden Sie eine Übersicht über Ihre gemachten Termine.</p>
         <g:render template="/layouts/message"/>
     </div>
