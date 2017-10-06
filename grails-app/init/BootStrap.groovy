@@ -7,6 +7,10 @@ class BootStrap {
 
         if(ApplicationConfig.count() == 0) {
             def applicationConfig = new ApplicationConfig()
+            applicationConfig.applicationLogo1x = "/assets/fu-logo-1x.png"
+            applicationConfig.applicationLogo2x = "/assets/fu-logo-2x.png"
+            applicationConfig.applicationLogo3x = "/assets/fu-logo-3x.png"
+            applicationConfig.applicationLogoMobile = "/assets/fu-logo-mobile.png"
             applicationConfig.save()
         }
 

@@ -1,12 +1,22 @@
+<%@ page import="appointments.ApplicationConfig" %>
 <header class="mdl-layout__header mdl-layout__header--scroll" style="margin-left: 0; width: 100%">
     <header class="fu-header" style="background-color: white">
         <a class="fu-logo" href="${createLink(controller: 'home')}" title="Zur Startseite">
+            <g:set var="ac" value="${ApplicationConfig.get(1)}"/>
+
+            %{--<picture>--}%
+                %{--<source srcset="${assetPath(src: 'fu-logo-1x.png')} 1x, ${assetPath(src: 'fu-logo-2x.png')} 2x, ${assetPath(src: 'fu-logo.png')} 3x">--}%
+                %{--<img id="default-logo" alt="Logo der Freien Universität Berlin" src="${assetPath(src: 'fu-logo.png')}">--}%
+            %{--</picture>--}%
+
+            %{--<span><img alt="Logo der Freien Universität Berlin" src="${assetPath(src: 'fu-logo-mobile.png')}"></span>--}%
+
             <picture>
-                <source srcset="${assetPath(src: 'fu-logo-1x.png')} 1x, ${assetPath(src: 'fu-logo-2x.png')} 2x, ${assetPath(src: 'fu-logo.png')} 3x">
-                <img id="default-logo" alt="Logo der Freien Universität Berlin" src="${assetPath(src: 'fu-logo.png')}">
+                <source srcset="${ac.applicationLogo1x} 1x, ${ac.applicationLogo2x} 2x, ${ac.applicationLogo3x} 3x">
+                <img id="default-logo" alt="Logo der Freien Universität Berlin" src="${ac.applicationLogo1x}">
             </picture>
 
-            <span><img alt="Logo der Freien Universität Berlin" src="${assetPath(src: 'fu-logo-mobile.png')}"></span>
+            <span><img alt="Logo der Freien Universität Berlin" src="${ac.applicationLogoMobile}" style="width:225px"></span>
         </a>
     </header>
     <div class="grey-header">
