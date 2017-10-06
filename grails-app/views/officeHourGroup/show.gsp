@@ -62,13 +62,13 @@
                             <g:formatDate date="${it.end}" formatName="default.date.format.time"/>
                         </td>
                         <td class="mdl-data-table__cell--non-numeric">
-                            <a href="${createLink(controller: 'officeHour', action: 'show', id: it.id)}" class="tooltipped" data-tooltip="Ansehen"> <i class="material-icons green-text">search</i> </a>
+                            <a href="${createLink(controller: 'officeHour', action: 'show', id: it.id)}" class="tooltipped" data-tooltip="Ansehen"> <i class="material-icons color-green">search</i> </a>
                         </td>
                         <td class="mdl-data-table__cell--non-numeric">
-                            <a href="${createLink(controller: 'officeHour', action: 'edit', id: it.id)}" class="tooltipped" data-tooltip="Bearbeiten oder Verschieben"> <i class="material-icons green-text">mode_edit</i> </a>
+                            <a href="${createLink(controller: 'officeHour', action: 'edit', id: it.id)}" class="tooltipped" data-tooltip="Bearbeiten oder Verschieben"> <i class="material-icons color-green">mode_edit</i> </a>
                         </td>
                         <td class="mdl-data-table__cell--non-numeric">
-                            <a href="${createLink(controller: 'officeHour', action: 'delete', id: it.id)}" class="tooltipped" data-tooltip="Löschen"> <i class="material-icons green-text">delete</i> </a>
+                            <a href="${createLink(controller: 'officeHour', action: 'delete', id: it.id)}" class="tooltipped" data-tooltip="Löschen"> <i class="material-icons color-green">delete</i> </a>
                         </td>
                     </tr>
                 </g:each>
