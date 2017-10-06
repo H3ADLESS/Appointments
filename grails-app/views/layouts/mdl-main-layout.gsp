@@ -13,12 +13,13 @@
     <asset:link rel="icon" href="favicon.ico" type="image/x-ico"/>
 
     <asset:stylesheet src="custom.css"/>
-    <asset:stylesheet src="material.css"/>
 
-    <asset:stylesheet src="jquery-ui.min.css.css"/>
-    <asset:javascript src="jquery-3.1.0.min.js"/>
+    <asset:stylesheet src="material.css"/>
     <asset:javascript src="material.min.js"/>
-    <asset:javascript src="jquery-ui.min.js.js"/>
+
+    <asset:javascript src="jquery-3.1.0.min.js"/>
+    <asset:stylesheet src="jquery-ui/jquery-ui.min.css"/>
+    <asset:javascript src="jquery-ui/jquery-ui.min.js"/>
 
     <asset:javascript src="menu.js"/>
 
