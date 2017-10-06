@@ -56,7 +56,10 @@
         </div>
 
         <div class="mdl-cell mdl-cell--12-col">
-        <b>Foto</b> <br>
+            <b>Foto</b> <br>
+
+            <div class="circle" id="preview" style="background-image: url('${lecturer?.imageUrl}')"> </div>
+
             <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label" style="width: 23em">
                 <input class="mdl-textfield__input" type="text" id="imageUrl" name="imageUrl" value="${lecturer?.imageUrl}">
                 <label class="mdl-textfield__label" for="imageUrl">Foto-URL</label>
@@ -137,7 +140,10 @@
 
 <script>
     $(document).ready(function () {
-
+        $("#imageUrl").on('change', function () {
+            console.log("change");
+            $("#preview").css("background-image", " url(" + $("#imageUrl").val() + ")");
+        })
     });
 </script>
 
