@@ -6,25 +6,40 @@ hibernate:
         use_query_cache: false
         region.factory_class: org.hibernate.cache.ehcache.SingletonEhCacheRegionFactory
 
-dataSource:
+#dataSource:
 #    logSql: true
-    pooled: true
-    jmxExport: true
-    driverClassName: com.mysql.jdbc.Driver
-    username: uniAppUser
-    password: z*§7z902t34!1bpn&Z=(OT68t21&
+ #   pooled: true
+ #   jmxExport: true
+ #   driverClassName: com.mysql.jdbc.Driver
+ #   username: uniAppUser
+ #   password: z*§7z902t34!1bpn&Z=(OT68t21&
 
 environments:
     development:
         dataSource:
+            pooled: true
+            jmxExport: true
+            driverClassName: com.mysql.jdbc.Driver
+            username: uniAppUser
+            password: z*§7z902t34!1bpn&Z=(OT68t21&
             dbCreate: update
-            url: jdbc:mysql://localhost/uniapp2
+            url: ''
     test:
         dataSource:
+            pooled: true
+            jmxExport: true
+            driverClassName: com.mysql.jdbc.Driver
+            username: uniAppUser
+            password: z*§7z902t34!1bpn&Z=(OT68t21&
             dbCreate: update
             url: jdbc:mysql://localhost/uniapp
     production:
         dataSource:
+            pooled: true
+            jmxExport: true
+            driverClassName: com.mysql.jdbc.Driver
+            username: uniAppUser
+            password: z*§7z902t34!1bpn&Z=(OT68t21&
             dbCreate: update
             url: jdbc:mysql://localhost/uniapp
             properties:
@@ -55,6 +70,23 @@ grails:
     spring:
         transactionManagement:
             proxies: false
+    config:
+        locations:
+#            - file:///$APPOINTMENTS/config.yml
+             - file:///Users/timohaffner/Workspace/Tomcat/Appointments/config.yml
+             - file:///${System.getenv(env)}
+#            - classpath:myconfig.groovy
+#            - classpath:myconfig.yml
+#            - classpath:myconfig.properties
+#            - file:///etc/app/myconfig.groovy
+#            - file:///etc/app/myconfig.yml
+#            - file:///etc/app/myconfig.properties
+#            - ~/.grails/myconfig.groovy
+#            - ~/.grails/myconfig.yml
+#            - ~/.grails/myconfig.properties
+#            - file:${catalina.base}/myconfig.groovy
+#            - file:${catalina.base}/myconfig.yml
+#            - file:${catalina.base}/myconfig.properties
 info:
     app:
         name: '@info.app.name@'
@@ -72,6 +104,21 @@ endpoints:
 
 ---
 grails:
+    mail:
+        host: smtp.gmail.com
+        port: 587
+        username: headless705@gmail.com
+        password: THaffner705
+        props: [
+                  "mail.smtp.auth":"true",
+                  "mail.smtp.starttls.enable":"true",
+                  "mail.smtp.host":"smtp.gmail.com",
+                  "mail.smtp.port":"587",
+                  "mail.smtp.debug":"true",
+#                  "mail.smtp.socketFactory.fallback":"false"
+               ]
+
+
     mime:
         disable:
             accept:
@@ -125,3 +172,4 @@ grails:
 endpoints:
     jmx:
         unique-names: true
+

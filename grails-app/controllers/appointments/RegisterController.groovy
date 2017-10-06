@@ -6,7 +6,7 @@ class RegisterController {
 
     static allowedMethods = ['POST', 'GET']
 
-    def mailService
+    def appointmentsMailService
     def springSecurityService
 
     @Secured(['ROLE_ADMIN', 'ROLE_LECTURER'])
@@ -43,7 +43,7 @@ class RegisterController {
             return
         }
 
-        boolean success = mailService.sendInviteTo(email, uuid)
+        boolean success = appointmentsMailService.sendInviteTo(email, uuid)
         if (!success) {
             flash.message = "Error sending invitation. Please try again later."
             render (view: "index")

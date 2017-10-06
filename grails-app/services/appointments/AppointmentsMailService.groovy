@@ -12,7 +12,7 @@ import javax.mail.internet.InternetAddress
 import javax.mail.internet.MimeMessage
 
 @Transactional
-class MailService {
+class AppointmentsMailService {
 
     def boolean sendAppointmentNotification(Appointment appointment, NotificationType type) {
         UserSettings userSettings  = appointment.officeHour.lecturer.userSettings

@@ -7,7 +7,7 @@ import grails.transaction.Transactional
 class AppointmentService {
 
     def springSecurityService
-    def mailService
+    def appointmentsMailService
 
     /**
      * Sets the duration of the appointment according to the limits set by the lecturer. If the appointment is made by
@@ -350,7 +350,7 @@ class AppointmentService {
                 appointment.discard()
                 // Don't break here. Let's see if a smaller appointment could fit.
             } else {
-                mailService.sendAppointmentNotification(appointment, NotificationType.APPOINTMENT_RESCHEDULED)
+                appointmentsMailService.sendAppointmentNotification(appointment, NotificationType.APPOINTMENT_RESCHEDULED)
                 appointment.save()
                 iterator.remove()
                 nextAppointmentDate = appointment.end

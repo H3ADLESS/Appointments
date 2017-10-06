@@ -10,8 +10,17 @@ class HomeController {
     static allowedMethods = ['POST', 'GET']
 
     def springSecurityService
+    def mailService
 
     def index() {
+
+        mailService.sendMail {
+            to "timo_h@arcor.de"
+            from "headless705@gmail.com"
+            subject "Hello John"
+            text 'this is some text'
+        }
+
         render view: 'index'
     }
 

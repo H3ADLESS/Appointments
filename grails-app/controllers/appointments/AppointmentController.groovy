@@ -14,7 +14,7 @@ class AppointmentController {
 
     def springSecurityService
     def appointmentService
-    def mailService
+    def appointmentsMailService
 
     def index() {
         Lecturer lecturer = Lecturer.get(params.id)
@@ -153,7 +153,7 @@ class AppointmentController {
         boolean success = appointmentService.checkBlockedAndCreate(appointment)
 
         if (success) {
-            mailService.sendAppointmentNotification(appointment, NotificationType.APPOINTMENT_CREATED)
+            appointmentsMailService.sendAppointmentNotification(appointment, NotificationType.APPOINTMENT_CREATED)
             redirect (action: 'successful', id: appointment.id)
             return
         } else {
