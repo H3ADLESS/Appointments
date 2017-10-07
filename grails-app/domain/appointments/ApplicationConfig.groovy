@@ -24,6 +24,7 @@ class ApplicationConfig {
     String applicationLogo2x
     String applicationLogo3x
     String applicationLogoMobile
+    String favIcon
 
     static constraints = {
         ltiKey nullable: true
@@ -46,6 +47,7 @@ class ApplicationConfig {
         applicationLogo2x nullable: true
         applicationLogo3x nullable: true
         applicationLogoMobile nullable: true
+        favIcon nullable: true
     }
 
     static mapping = {
@@ -53,6 +55,7 @@ class ApplicationConfig {
         applicationLogo2x defaultValue: "'/assets/fu-logo-2x.png'"
         applicationLogo3x defaultValue: "'/assets/fu-logo-3x.png'"
         applicationLogoMobile defaultValue: "'/assets/fu-logo-mobile.png'"
+        favIcon defaultValue: "'/assets/favicon.ico'"
     }
 
 }

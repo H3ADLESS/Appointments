@@ -90,7 +90,10 @@
                 <input id="applicationLogoMobile" name="applicationLogoMobile" type="text" value="${config?.applicationLogoMobile}">
                 <label for="applicationLogoMobile">Application Logo Mobile</label>
             </div>
-
+            <div class="input-field col s12">
+                <input id="favIcon" name="favIcon" type="text" value="${config?.favIcon}">
+                <label for="favIcon">favIcon</label>
+            </div>
 
         </div>
 

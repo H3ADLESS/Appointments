@@ -11,6 +11,7 @@ class BootStrap {
             applicationConfig.applicationLogo2x = "/assets/fu-logo-2x.png"
             applicationConfig.applicationLogo3x = "/assets/fu-logo-3x.png"
             applicationConfig.applicationLogoMobile = "/assets/fu-logo-mobile.png"
+            applicationConfig.favIcon = "/assets/favicon.ico"
             applicationConfig.save()
         }
 

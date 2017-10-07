@@ -1,3 +1,4 @@
+<%@ page import="appointments.ApplicationConfig" %>
 <!doctype html>
 <html lang="en" class="no-js">
 <head>
@@ -10,7 +11,7 @@
 
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
-    <asset:link rel="icon" href="favicon.ico" type="image/x-ico"/>
+    <link rel="icon" type="image/x-ico" href="${ApplicationConfig.get(1)?.favIcon}"/>
 
     <asset:stylesheet src="custom.css"/>
 
