@@ -20,29 +20,29 @@
 
         <g:form action="guest">
             <div class="row">
-                <div class="input-field col s2">
-                    <input id="title" name="title" type="text" value="${params.title}">
-                    <label for="title">Anrede und Titel</label>
+                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label" style="width: 8em">
+                    <input class="mdl-textfield__input" id="title" name="title" type="text" value="${params.title}">
+                    <label class="mdl-textfield__label" for="title">Anrede und Titel</label>
                 </div>
-                <div class="input-field col s5">
-                    <input id="firstName" name="firstName" type="text" value="${params.firstName}">
-                    <label for="firstName">Vorname</label>
+                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label" style="width: 11em">
+                    <input class="mdl-textfield__input" id="firstName" name="firstName" type="text" value="${params.firstName}">
+                    <label class="mdl-textfield__label" for="firstName">Vorname</label>
                 </div>
-                <div class="input-field col s5">
-                    <input id="lastName" name="lastName" type="text" value="${params.lastName}">
-                    <label for="lastName">Nachname</label>
-                </div>
-            </div>
-            <div class="row">
-                <div class="input-field col s6">
-                    <input id="password" name="password" type="password">
-                    <label for="password">Password</label>
+                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label" style="width: 11em">
+                    <input class="mdl-textfield__input" id="lastName" name="lastName" type="text" value="${params.lastName}">
+                    <label class="mdl-textfield__label" for="lastName">Nachname</label>
                 </div>
             </div>
             <div class="row">
-                <div class="input-field col s6">
-                    <input id="matchPassword" name="matchPassword" type="password">
-                    <label for="matchPassword">Password wiederholen</label>
+                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                    <input class="mdl-textfield__input" id="password" name="password" type="password">
+                    <label class="mdl-textfield__label" for="password">Password</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                    <input class="mdl-textfield__input" id="matchPassword" name="matchPassword" type="password">
+                    <label class="mdl-textfield__label" for="matchPassword">Password wiederholen</label>
                 </div>
             </div>
 

@@ -20,18 +20,25 @@
 
         <div class="mdl-cell mdl-cell--12-col">
             <b>Profil freigeben</b>
+            <p>Ihr Profil ist für Studierende erst sichtbar, wenn Sie dieses aktivieren.</p>
+
 
             <div class="switch" style="margin: 6px auto 20px auto">
-                <label>
+                <div style="float: left; margin-right: 1em;">
                     Inaktiv
+                </div>
+                <div style="float: left">
                     <label class="mdl-switch mdl-js-switch mdl-js-ripple-effect" for="lecturer.active">
-                        <input type="checkbox" id="lecturer.active" name="lecturer.active" class="mdl-switch__input"  ${lecturer?.active? 'checked' : ''}>
-                        <span class="mdl-switch__label">Profil aktiv</span>
+                        <input style="float: left" type="checkbox" id="lecturer.active" name="lecturer.active" class="mdl-switch__input"  ${lecturer?.active? 'checked' : ''}>
                     </label>
+                </div>
+                <div style="float: left; margin-left: 1em;">
                     Aktiv
-                </label>
+                </div>
             </div>
         </div>
+
+        <div style="content: ' '; clear: both;"></div>
 
         <div class="mdl-cell mdl-cell--12-col">
             <b>Name</b> <br>

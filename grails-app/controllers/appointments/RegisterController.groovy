@@ -27,6 +27,12 @@ class RegisterController {
 
         String email = params.email
 
+        if (User.findByEmail(email) != null) {
+            flash.message = "E-Mail already in use."
+            render (view: 'index')
+            return
+        }
+
         String uuid = UUID.randomUUID().toString()
         while (InvitedUser.findById(uuid) != null) {
             uuid = UUID.randomUUID().toString()
@@ -73,6 +79,12 @@ class RegisterController {
             } else {
                 flash.message = "Please insert your name"
             }
+            render (view: "guest", params: params)
+            return
+        }
+
+        if (User.findAllByEmail(iv.email) != null) {
+            flash.message = "User already exists."
             render (view: "guest", params: params)
             return
         }
