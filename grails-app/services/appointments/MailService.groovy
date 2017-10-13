@@ -15,7 +15,9 @@ import javax.mail.internet.MimeMessage
 class MailService {
 
     def boolean sendAppointmentNotification(Appointment appointment, NotificationType type) {
+        Session session = getMailSession();
         UserSettings userSettings  = appointment.officeHour.lecturer.userSettings
+
 
         if (type == NotificationType.APPOINTMENT_CREATED) {
             if (!userSettings.onAppointmentCreation) {
@@ -39,19 +41,15 @@ class MailService {
             msg.setFrom(new InternetAddress("headless705@gmail.com"));
             msg.setSubject("Einladung zur Nutzung der Sprechstundenapplikation der FU Berlin");
             String message = """
-            Hallo,
-                      
-            Du wurdest dazu eingeladen die Webapp der FU-Berlin zu verwenden, um Deine Sprechstunden zu organisieren.
-            
-            Wenn Du die App nutzen möchtest folge dem nachfolgenden Link:
-            https://localhost:8090/register/guest?id=${urlCode}
+Hallo,
+          
+Du wurdest dazu eingeladen die Webapp der FU-Berlin zu verwenden, um Deine Sprechstunden zu organisieren.
 
-            Solltest du diese Nachricht nicht angefordert haben ignoriere Sie einfach.
+Wenn Du die App nutzen möchtest folge dem diesem Link:
+https://localhost:8090/register/guest?id=${urlCode}
 
-            Mit besten Grüßen
-
-            Timo
-            """
+Solltest du diese Nachricht nicht angefordert haben ignoriere Sie einfach.
+"""
             msg.setText(message, "UTF-8");
             Transport.send(msg);
             return true

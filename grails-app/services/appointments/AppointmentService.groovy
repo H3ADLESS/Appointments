@@ -1,7 +1,15 @@
 package appointments
 
 import appointments.notfications.NotificationType
+import biweekly.Biweekly
+import biweekly.ICalendar
+import biweekly.component.VEvent
+import biweekly.property.Summary
+import biweekly.util.Frequency
+import biweekly.util.Recurrence
 import grails.transaction.Transactional
+
+import java.time.Duration
 
 @Transactional
 class AppointmentService {
@@ -454,5 +462,23 @@ class AppointmentService {
 
     }
 
+    def createICal(Appointment appointment) {
+        ICalendar ical = new ICalendar();
+        VEvent event = new VEvent();
+        Summary summary = event.setSummary("Sprechstunde bei ${appointment.officeHour.lecturer.name}");
+        summary.setLanguage("de-DE");
+
+        Date start = appointment.start
+        event.setDateStart(start)
+
+        biweekly.util.Duration duration = biweekly.util.Duration.Builder().minutes(appointment.duration).build();
+        event.setDuration(duration);
+
+        // Recurrence recur = new Recurrence.Builder(Frequency.WEEKLY).interval(2).build();
+        // event.setRecurrenceRule(recur);
+        ical.addEvent(event);
+
+        String str = Biweekly.write(ical).go();
+    }
 
 }

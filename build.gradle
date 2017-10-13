@@ -53,22 +53,24 @@ dependencies {
     compile "org.grails.plugins:cache"
     compile "org.grails.plugins:scaffolding"
 
-//    compile "org.grails.plugins:hibernate4"
-//    compile "org.hibernate:hibernate-ehcache"
+    //compile "org.grails.plugins:hibernate4"
+    //compile "org.hibernate:hibernate-ehcache"
     compile "org.grails.plugins:hibernate5:5.0.10"
     compile "org.hibernate:hibernate-core:5.1.0.Final"
     compile 'org.hibernate:hibernate-java8:5.1.0.Final'
     compile "org.hibernate:hibernate-ehcache:5.1.0.Final"
 
     compile 'org.grails.plugins:spring-security-core:3.1.1'
-//    compile 'javax.mail:javax.mail-api:1.5.6'
+    //compile 'javax.mail:javax.mail-api:1.5.6'
 
-// https://mvnrepository.com/artifact/com.sun.mail/javax.mail
+    //https://mvnrepository.com/artifact/com.sun.mail/javax.mail
     compile group: 'com.sun.mail', name: 'javax.mail', version: '1.5.6'
 
-
+    //sample implementation from imsglobal
     compile group: 'org.imsglobal', name: 'basiclti-util', version: '1.1.1'
 
+    //used to create ical mail-attachments
+    compile 'net.sf.biweekly:biweekly:0.6.1'
 
     console "org.grails:grails-console"
 
